@@ -1,4 +1,4 @@
-#isitdtu CTF 2022 writeup
+# isitdtu CTF 2022 writeup
 
 ## Challenge description
 ![Challenge description](assets/description.png)
