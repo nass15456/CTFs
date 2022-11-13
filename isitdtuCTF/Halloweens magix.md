@@ -64,7 +64,7 @@ Result = array([[5., 6.],
 **NB:** As we learnt in algebra some matrix are not inrevisbles so becarfull to chose your matrix when its about encryption
 
 
-Now we are able to revert the multiplication, let's test the rest on functions, let's check if the function bytes2matrix() is the reel revert of bytes2matrix2() (it seem's not to be the case because of the pack of 'H!', to get the answer i'll test on my matrix result :
+Now we are able to revert the multiplication, let's test the rest on functions, let's check if the function matrix2bytes() is the reel revert of bytes2matrix2() (it seem's not to be the case because of the pack of 'H!', to get the answer i'll test on my matrix result :
 
 ```
 >>> cipher = bytes2matrix([[19, 22],[43, 50]])
