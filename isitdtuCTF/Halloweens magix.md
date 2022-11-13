@@ -29,7 +29,7 @@ To do i'll use sipmple 2x2 matrix:
 >>> from sympy.matrices import Matrix
 >>> A = [[1,2],[3,4]]
 >>> x = [[5,6],[7,8]]
->>> np.dot(A,B)
+>>> np.dot(A,x)
 Result = array([[19, 22],
        [43, 50]])
 
