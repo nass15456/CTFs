@@ -43,7 +43,7 @@ Let's try this on postman..
 
 Interesting! We have a function called registered_beta_user in same level as login. this time i'll copy my query and variable from chrome network tab and replace the login by this function and use my first_name as login & password : 
 
-
+**NB:** add Content-Type=application/graphql to your request header
 
 ![registertry](assets/registertry.png)
 
