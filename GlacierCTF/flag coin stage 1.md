@@ -25,7 +25,7 @@ First thing i tried is sql injection but it didnt work so i decided to follow my
 After few researchs i realised that's **GraphQL** is data query and manipulation language for APIs developed by Facebook
 
 
-Let's see in google if vulinirabilities exists in this one..,and i found this blog : 
+Let's see in google if vulnerabilities exist on this one...This blog could be interesting : 
 
 [link to the blog](https://blog.yeswehack.com/yeswerhackers/how-exploit-graphql-endpoint-bug-bounty)
 
