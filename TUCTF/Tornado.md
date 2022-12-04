@@ -10,12 +10,14 @@ When we folow our network activites we can find that a cookies is present with b
 ![Cookie](assets/cookie.png)
 
 
-I changed its value to "yes" insted of "no" also when we send input we have a hidden message in namecheck page:
+I changed its value to "yes" insted of "no"..Nothing happening :(
+
+When we send input we have a hidden message in namecheck page:
 
 ![Hidden](assets/hidden.png)
 
 
-I tried many values for the cookie but nothing happend, next i did few research about Tornado and i found that's a python server and one of its vulnirabilities is that e can inject some python code like this  {{your_code}}
+I tried many values for the cookie but nothing happend, next i did few researchs about Tornado and i found that's a python server and one of its vulnirabilities is that we can inject some python code like this  {{your_code}}
 
 
 I typed this one and i ve got an interesting error : 
