@@ -47,14 +47,14 @@ Then i realised that we are dealing with a piano :)
 when we make time to respond the host say that we are too slow :D
 
 
-![attempt1](attempt1.png)
+![attempt1](assets/attempt1.png)
 
 
 
 if the answer is wrong he is mad :o
 
 
-![attempt2](attempt2.png)
+![attempt2](assets/attempt2.png)
 
 
 
