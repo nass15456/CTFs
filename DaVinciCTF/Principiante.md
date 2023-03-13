@@ -88,7 +88,7 @@ note = data.split(" ")[4]
 As we can see we need in each round to send n time the keyboard within the note in the last part, so (n-1) of simple keyboard and the last will have the note
 
 
-I created a sipmple keyboad and a dictionary of keyboard of each note, in addition i removed the right border of the simple keyboard because when we concatinate with another one we will have also the left border of the second one :
+I created a simple keyboad and a dictionary of keyboard of each note, in addition i removed the right border of the simple keyboard because when we concatinate with another one we will have also the left border of the second one :
 
 ```
 keboad = ["____________________________",
@@ -205,7 +205,7 @@ resp = {
 ```
  
 
-Now ill loop in while loop, parse recvied data and prepare the answer as following : 
+Now ill use while loop, parse recvied data and prepare the answer as following : 
 
 
 ```
