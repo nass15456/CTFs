@@ -380,8 +380,8 @@ while True:
 	print(data.decode())
 
 ```
-## Recored video :
-For ore fun i've recorded a video of the interaction with the host :
+## Recorded video :
+For more fun i've recorded a video of the interaction with the host :
 
 https://user-images.githubusercontent.com/32133781/224827217-95bded2b-c4df-4b3b-a663-5554899147f1.mp4
 
@@ -391,6 +391,7 @@ https://user-images.githubusercontent.com/32133781/224827217-95bded2b-c4df-4b3b-
 Noice, here is your flag : dvCTF{4r3_Y0U_7H3_N3X7_M0Z4r7?}
 
 => are you the next mozart?
+If you say so ¯\ (ツ) /¯
 ```
 
 
