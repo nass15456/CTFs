@@ -5,7 +5,7 @@
 ![Challenge description](assets/Description2.png)
 
 
-The idea of the challenge is being able to respond with the correct answer each time in short time (1 second as timeout) so it's impossible to do this by hand
+The idea of the challenge is being able to respond with the correct answer each round in short time (1 second as timeout) so it's impossible to do this by hand
 
 as we have host to remote :
 
