@@ -17,7 +17,7 @@ p = "110011011100011010101100000100001000001010100101111010000001010011000111011
 
 According to the description we know that's we are given public key (n,e) and the prime p which contain 2 errors. 
 
-It could be one of 2 cases :
+It could be one of following cases :
 
 * the author swaped 2 bits so we can use one loop
 * 2 bits are written wrongly (0 insted of 1 and vice versa) => require two loops 
@@ -25,7 +25,7 @@ It could be one of 2 cases :
 I tried both of them and i realised we in are in the second case
 
 
-So the idea here is to flip each couple of bits until we find the correct p value. And to check whether p is correct we have many solution
+So the idea here is to flip each possible couple of bits until we find the correct p value. And to check whether p is correct we have several solutions
 
 * check that both p and q (n/p) are primes (i found many condidates so i moved to another solution)
 * check that n - (n/p) * p = 0 
