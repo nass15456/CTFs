@@ -18,7 +18,7 @@ nc prog.dvc.tf 7751
 The best thing to do is to open a socket with a program to respond quickly
 
 
-The keyboard suggested was a little bit for me and didnt get why in the given example we answered that way :
+The keyboard suggested was a little bit weird for me and i didnt get why in the given example we answered that way :
 
 ```
 Give me the 4th A# plz :
