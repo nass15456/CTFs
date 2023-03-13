@@ -382,7 +382,8 @@ while True:
 ```
 ## Recored video :
 For ore fun i've recorded a video of the interaction with the host :
-![Recored](assets/recored.mp4)
+
+https://user-images.githubusercontent.com/32133781/224827217-95bded2b-c4df-4b3b-a663-5554899147f1.mp4
 
 
 ## Result :
