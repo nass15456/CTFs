@@ -80,29 +80,30 @@ We have :
 
 ```
 
-
-By replacing (3) in (2) and (1) in (4) we have : 
+From (1) and (3) we have: 
 
 ```
-(1)' bob_shared_key = ( (5 ** alice_public_key) %  modulus ** bob_private_key) % modulus // 4
-(2)' alice_shared_key = ( (5 ** bob_public_key) %  modulus ** alice_private_key) %  modulus // 4
+
+(1)' (5 ** bob_private_key) % modulus  = (bob_public_key *4+1)
+(2)' (5 ** alice_private_key) % modulus  = (alice_public_key *4+1)
+
+
+```
+
+
+By replacing (1)' in (2) and (2)' in (4) we have : 
+
+```
+(1)'' bob_shared_key = ( (5 ** alice_public_key) %  modulus ** bob_private_key) % modulus // 4
+(2)'' alice_shared_key = ( (5 ** bob_public_key) %  modulus ** alice_private_key) %  modulus // 4
 
 ```
 
 So bob_shared_key share the same value with alice_shared_key
 
-From (1) and (2) we have also: 
-
-```
-
-(1)'' (5 ** bob_private_key) % modulus  = (bob_public_key *4+1)
-(2)'' (5 ** alice_private_key) % modulus  = (alice_public_key *4+1)
 
 
-```
-
-
-As we have both alice and bob's public keys our issue here is to find their private keys and to do that we need to solve (1)'' and (2)''
+As we have both alice and bob's public keys our issue here is to find their private keys and to do that we need to solve (1)' and (2)'
 
 
 After searching i found a way to solve the equation accoriding to a method called discrete_log, we can import it from sympy.ntheory
