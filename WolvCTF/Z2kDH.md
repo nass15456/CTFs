@@ -56,7 +56,7 @@ assert alice_shared_secret == bob_shared_secret # the math works out!
 
 ```
 
-We can understand from the script that's alice and bob are echaning public keys (so it's an asyetric algorithm). First they generate a public key from their hidden private key then they generate a shared key 
+We can understand from the script that's alice and bob are exchaning public keys (so it's an asyetric algorithm). First they generate a public key from their hidden private key then they generate a shared key 
 
 
 At the end of the script we have this question:
@@ -66,7 +66,7 @@ At the end of the script we have this question:
 
 ```
 
-Let's answer this quuestios first, why alice and bob ends up with same value? 
+Let's answer this quuestion first, why alice and bob ends up with same value? 
 
 We have :
 
@@ -89,7 +89,7 @@ By replacing (3) in (2) and (1) in (4) we have :
 
 ```
 
-So bob_shared_key share the sae value as alice_shared_key
+So bob_shared_key share the same value with alice_shared_key
 
 From (1) and (2) we have also: 
 
@@ -105,7 +105,7 @@ From (1) and (2) we have also:
 As we have both alice and bob's public keys our issue here is to find their private keys and to do that we need to solve (1)'' and (2)''
 
 
-After searching i found a way to do that accoriding to a method called discrete_log, we can import it from sympy.ntheory
+After searching i found a way to solve the equation accoriding to a method called discrete_log, we can import it from sympy.ntheory
 
 
 
@@ -114,11 +114,11 @@ from sympy.ntheory import discrete_log
 ```
 
 
-With this i was able to find privates keys, but i was wandering where is the message ! I realised too that the key exchange methode is called Diffie-Hellman key exchange link for more info : [link for more details](https://simple.wikipedia.org/wiki/Diffie-Hellman_key_exchange) 
+With this i was able to find privates keys, but i was wondering where is the message ! I realised too that the key exchange methode is called Diffie-Hellman key exchange => link for more info : [link for more details](https://simple.wikipedia.org/wiki/Diffie-Hellman_key_exchange) 
 
 
 
-After any tries i found it all we need to do now is to transform the shared key to ascii and w'll have the flag :)
+After many tries i found it. All we need to do is to transform the shared key to ascii and we'll have the flag :)
 
 
 ## My script
