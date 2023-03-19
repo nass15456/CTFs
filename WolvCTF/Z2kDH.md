@@ -56,7 +56,7 @@ assert alice_shared_secret == bob_shared_secret # the math works out!
 
 ```
 
-We can understand from the script that's alice and bob are exchaning public keys (so it's an asyetric algorithm). First they generate a public key from their hidden private key then they generate a shared key 
+We can understand from the script that's alice and bob are exchaning public keys (so it's an asymetric algorithm). First they generate a public key from their hidden private key then they generate a shared key 
 
 
 At the end of the script we have this question:
