@@ -5,7 +5,7 @@
 ![Challenge description](assets/Description.png)
 
 
-## outpout.txt content :
+## output.txt content :
 
 ```
 99edb8ed8892c664350acbd5d35346b9b77dedfae758190cd0544f2ea7312e81
@@ -66,7 +66,7 @@ At the end of the script we have this question:
 
 ```
 
-Let's answer this quuestion first, why alice and bob ends up with same value? 
+Let's answer this question first, why alice and bob ends up with same value? 
 
 We have :
 
