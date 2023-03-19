@@ -5,7 +5,7 @@
 ![Challenge description](assets/Description2.png)
 
 
-The idea of the challenge is being able to respond with the correct answer each time in short time (1 second as timeout) so it's impossible to do this by hand
+The idea of the challenge is being able to respond with the correct answer each round in short time (1 second as timeout) so it's impossible to do this by hand
 
 as we have host to remote :
 
@@ -18,7 +18,7 @@ nc prog.dvc.tf 7751
 The best thing to do is to open a socket with a program to respond quickly
 
 
-The keyboard suggested was a little bit for me and didnt get why in the given example we answered that way :
+The keyboard suggested was a little bit weird for me and i didnt get why in the given example we answered that way :
 
 ```
 Give me the 4th A# plz :
@@ -47,14 +47,14 @@ Then i realised that we are dealing with a piano :)
 when we make time to respond the host say that we are too slow :D
 
 
-![attempt1](attempt1.png)
+![attempt1](assets/attempt1.png)
 
 
 
 if the answer is wrong he is mad :o
 
 
-![attempt2](attempt2.png)
+![attempt2](assets/attempt2.png)
 
 
 
@@ -88,7 +88,7 @@ note = data.split(" ")[4]
 As we can see we need in each round to send n time the keyboard within the note in the last part, so (n-1) of simple keyboard and the last will have the note
 
 
-I created a sipmple keyboad and a dictionary of keyboard of each note, in addition i removed the right border of the simple keyboard because when we concatinate with another one we will have also the left border of the second one :
+I created a simple keyboad and a dictionary of keyboard of each note, in addition i removed the right border of the simple keyboard because when we concatinate with another one we will have also the left border of the second one :
 
 ```
 keboad = ["____________________________",
@@ -205,7 +205,7 @@ resp = {
 ```
  
 
-Now ill loop in while loop, parse recvied data and prepare the answer as following : 
+Now ill use while loop, parse recvied data and prepare the answer as following : 
 
 
 ```
@@ -380,9 +380,10 @@ while True:
 	print(data.decode())
 
 ```
-## Recored video :
-For ore fun i've recorded a video of the interaction with the host :
-![Recored](assets/recored.mp4)
+## Recorded video :
+For more fun i've recorded a video of the interaction with the host :
+
+https://user-images.githubusercontent.com/32133781/224827217-95bded2b-c4df-4b3b-a663-5554899147f1.mp4
 
 
 ## Result :
@@ -390,6 +391,7 @@ For ore fun i've recorded a video of the interaction with the host :
 Noice, here is your flag : dvCTF{4r3_Y0U_7H3_N3X7_M0Z4r7?}
 
 => are you the next mozart?
+If you say so ¯\ (ツ) /¯
 ```
 
 
