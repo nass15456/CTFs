@@ -94,8 +94,8 @@ From (1) and (3) we have:
 By replacing (1)' in (2) and (2)' in (4) we have : 
 
 ```
-(1)'' bob_shared_key = ( (5 ** alice_public_key) %  modulus ** bob_private_key) % modulus // 4
-(2)'' alice_shared_key = ( (5 ** bob_public_key) %  modulus ** alice_private_key) %  modulus // 4
+(1)'' bob_shared_key = ( (5 ** alice_private_key) % modulus ** bob_private_key) % modulus // 4
+(2)'' alice_shared_key = ( (5 ** bob_private_key) % modulus ** alice_private_key) %  modulus // 4
 
 ```
 
