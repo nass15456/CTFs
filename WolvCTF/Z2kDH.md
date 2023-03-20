@@ -72,15 +72,15 @@ We have :
 
 ```
 (1) - bob_public_key = (5 ** bob_private_key) %  modulus // 4
-(2) - bob_shared_key = (alice_public_key *4+1  ** bob_private_key) %  modulus // 4
+(2) - alice_public_key = (5 ** alice_private_key) %  modulus // 4
 
 
-(3) - alice_public_key = (5 ** alice_private_key) %  modulus // 4
+(3) - bob_shared_key = (alice_public_key *4+1  ** bob_private_key) %  modulus // 4
 (4) - alice_shared_key = (bob_public_key *4+1  ** alice_private_key) %  modulus // 4
 
 ```
 
-From (1) and (3) we have: 
+From (1) and (2) we have: 
 
 ```
 
@@ -91,7 +91,7 @@ From (1) and (3) we have:
 ```
 
 
-By replacing (1)' in (2) and (2)' in (4) we have : 
+By replacing (1)' in (4) and (2)' in (3) we have : 
 
 ```
 (1)'' bob_shared_key = ( (5 ** alice_private_key) % modulus ** bob_private_key) % modulus // 4
