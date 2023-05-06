@@ -2,7 +2,7 @@
 
 ## Challenge description
 
-![Challenge description](assets/description.png)
+![Challenge description](assets/Description.png)
 
 
 ## Script :
