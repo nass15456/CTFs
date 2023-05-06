@@ -70,7 +70,7 @@ while True:
 
 ## Understanding the script :
 
-From the script we can understand that the flag contains only ascii carecters that are stored in an array with their Decimal values. 
+From the script we can understand that the flag contains only ascii characters that are stored in an array with their Decimal values. 
  
 
 
