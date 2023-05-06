@@ -83,7 +83,7 @@ a_0 * x_i^0 + a_1 * x_i^1 + a_2 * x_i^2 ... a_n * x_i^n (with n == lenght of arr
 
 ```
 
-While 0^0 is equal to 1 we can have the value of a_0 from the shuffled array (here i've got an idea to ask the server many time with query 1 and x_0 = 0 to retrive the used caracters in the FLAG. this will help me to reduce the search time.
+While 0^0 is equal to 1 we can have the value of a_0 from the shuffled array (here i've got an idea to ask the server many time with query 1 and x_0 = 0 to retrive the used characters in the FLAG. this will help me to reduce the search time.
 
 
 To do that i opened a socket and i asked server 100 time :
@@ -123,7 +123,7 @@ print(candidate)
 ```
 
 
-To make sure i replied the script twice and i had the same result so now i have FLAG caracters, all i need to do is to find it's lenght (some caraceters may be used more than one time) and the original index for each caracter
+To make sure i replied the script twice and i had the same result so now i have FLAG characters, all i need to do is to find it's lenght (some characeters may be used more than one time) and the original index for each character
 
 
 As i'm artificial intelligence and deep learning graduate i'm fan of sat solvers wich are part of classicial AI. I said by my self we can solve the equation system with z3 (sat solver in python) with the followings constraints :
