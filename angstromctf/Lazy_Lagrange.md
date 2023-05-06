@@ -76,7 +76,7 @@ From the script we can understand that the flag contains only ascii characters t
 
 Now let's analyse query1 functions: 
 
-we notice that once we launch this function the array is shuffled randomly, we can pass a list of decimal values and we get a sum or each x_i as following 
+we notice that once we launch this function the array is shuffled randomly, we can pass a list of decimal values and we get a sum of each x_i as following 
 
 ```
 a_0 * x_i^0 + a_1 * x_i^1 + a_2 * x_i^2 ... a_n * x_i^n (with n == lenght of array)
