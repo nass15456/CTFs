@@ -57,6 +57,7 @@ As we can see both of them share the same left hexadecimal value '4' wich is rep
 
 
 We can try something on piano notes :
+
 ![Challenge description](assets/piano.png)
 
 
