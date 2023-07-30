@@ -23,7 +23,7 @@ We can guess that :
 '}'=E4
 ```
 
-We notice that C and F are little bit similar and this is logical because they are so close in alphabet
+We notice that 'C' and 'F' are little bit similar and this is logical because they are so close in alphabet
 
 
 After reding the description for a second time i found that we have an interesting hint:
