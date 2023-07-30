@@ -114,5 +114,5 @@ print(message)
 TFCCTF{N0t3W0rthy_m3ss4g3}
 ```
 
-Note a worthy message :)
+Note worthy message :)
 
