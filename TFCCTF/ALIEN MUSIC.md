@@ -83,7 +83,7 @@ The only issue i found here is how to decode numeric notes like in E4 we dont kn
 
 Now we are done with guessing let's write some code : 
 
-python3```
+```python
 notes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#","1","2","3","4","5","6"]
 cipher = "DC# C#D# C#C C#C DC# C#D# E2 C#5 CA EC# CC DE CA EB EC# D#F EF# D6 D#4 CC EC EC CC# D#E CC E4"
 cipher = "".join([" "+cipher[i:i+2] if (i< len(cipher)-1 and cipher[i:i+2] in notes) else " "+cipher[i] if cipher[i] in notes else " " if cipher[i] == "" else "" for i in range(len(cipher))]).split(" ")[1:]
