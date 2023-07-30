@@ -40,7 +40,7 @@ So the author is insisting on 'hex' and here we have couples of notes and we kno
 255
 ```
 
-Let's do some test on 'C' and 'F'. We have :
+Let's do some tests on 'C' and 'F'. We have :
 
 ```
 >>> ord('C')
