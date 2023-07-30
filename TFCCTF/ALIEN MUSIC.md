@@ -8,10 +8,10 @@ In the beginning i was a bit lost because i never seen a cipher using notes, i d
 
 Let's analyse the cipher message: 
 
-DC# C#D# C#C C#C DC# C#D# E2 C#5 CA EC# CC DE CA EB EC# D#F EF# D6 D#4 CC EC EC CC# D#E CC E4
+```DC# C#D# C#C C#C DC# C#D# E2 C#5 CA EC# CC DE CA EB EC# D#F EF# D6 D#4 CC EC EC CC# D#E CC E4```
 
 
-As we know the flag should start with "TFCCTF{" and ends with "}"
+As we know the flag should start with ```"TFCCTF{"``` and ends with ```"}"```
 
 We can guess that :
 
