@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
 ## Encrypted passwords :
 
-![Challenge description](assets/Database_extract.png)
+![database extract](assets/Database_extract.png)
 
 
 We can understand from the script that we have a password list encrypted with chacha20 wich is similar to salsa20 (inspired by dances name's)
@@ -41,18 +41,18 @@ We can understand from the script that we have a password list encrypted with ch
 
 from the 14th line we know that passwords lengths are less or equal 18, and to fulfill the short ones, we add padding with spaces :
 
-![Challenge description](assets/hilight_code.png)
+![code hilight](assets/hilight_code.png)
 
 
 So we can say that we have informations about some prefixes of plaintext, that why we have common prefix between encrypted messages :
 
 
-![Challenge description](assets/dataBase_hilight.png)
+![data base hilght](assets/dataBase_hilight.png)
 
 Before starting this challenge, my teammate told me that he found a vulnerability in this algorithm that mentioned that using the same key and nonce is unsafe, so i started from this hypothesis, i said to myself that there may be a way to recover the key and nonce but after seeing the opration apllied 20 round for this algorithm i gave up:
 
 
-![Challenge description](assets/chacha20.png)
+![chacha20](assets/chacha20.png)
 
 
 
