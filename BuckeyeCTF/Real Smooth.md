@@ -1,4 +1,4 @@
-# Real Smooth 2023 writeup
+# Real Smooth : BuckeyeCTF 2023 writeup
 
 ## Challenge description
 
