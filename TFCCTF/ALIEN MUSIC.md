@@ -8,10 +8,10 @@ In the beginning i was a bit lost because i never seen a cipher using notes, i d
 
 Let's analyse the cipher message: 
 
-DC# C#D# C#C C#C DC# C#D# E2 C#5 CA EC# CC DE CA EB EC# D#F EF# D6 D#4 CC EC EC CC# D#E CC E4
+```DC# C#D# C#C C#C DC# C#D# E2 C#5 CA EC# CC DE CA EB EC# D#F EF# D6 D#4 CC EC EC CC# D#E CC E4```
 
 
-As we know the flag should start with "TFCCTF{" and ends with "}"
+As we know the flag should start with ```"TFCCTF{"``` and ends with ```"}"```
 
 We can guess that :
 
@@ -23,7 +23,7 @@ We can guess that :
 '}'=E4
 ```
 
-We notice that C and F are little bit similar and this is logical because they are so close in alphabet
+We notice that 'C' and 'F' are little bit similar and this is logical because they are so close in alphabet
 
 
 After reding the description for a second time i found that we have an interesting hint:
@@ -40,7 +40,7 @@ So the author is insisting on 'hex' and here we have couples of notes and we kno
 255
 ```
 
-Let's do some test on 'C' and 'F'. We have :
+Let's do some tests on 'C' and 'F'. We have :
 
 ```
 >>> ord('C')
@@ -57,6 +57,7 @@ As we can see both of them share the same left hexadecimal value '4' wich is rep
 
 
 We can try something on piano notes :
+
 ![Challenge description](assets/piano.png)
 
 
@@ -82,7 +83,7 @@ The only issue i found here is how to decode numeric notes like in E4 we dont kn
 
 Now we are done with guessing let's write some code : 
 
-python3```
+```python
 notes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#","1","2","3","4","5","6"]
 cipher = "DC# C#D# C#C C#C DC# C#D# E2 C#5 CA EC# CC DE CA EB EC# D#F EF# D6 D#4 CC EC EC CC# D#E CC E4"
 cipher = "".join([" "+cipher[i:i+2] if (i< len(cipher)-1 and cipher[i:i+2] in notes) else " "+cipher[i] if cipher[i] in notes else " " if cipher[i] == "" else "" for i in range(len(cipher))]).split(" ")[1:]
@@ -113,5 +114,5 @@ print(message)
 TFCCTF{N0t3W0rthy_m3ss4g3}
 ```
 
-Note a worthy messaes :)
+Note worthy message :)
 
