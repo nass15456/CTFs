@@ -153,6 +153,24 @@ cristianoronaldo\n
 Lets recover a key from this and see what happen..
 
 
+```python
+target = "c43c9cb4b225636abd8e5ea6104386068748"
+plain = "cristianoronaldo\n "
+key= ""
+for i in range(0,len(target),2):	
+	key+= "{:02x}".format(int(target[i:i+2],16) ^ ord(plain[i//2]))
+
+
+cs =[]
+for d in data:
+	c=""
+	for i in range(0,len(d),2):
+		c+= chr(int("{:02x}".format(int(d[i:i+2],16) ^ int(key[i:i+2],16)),16))
+	cs.append((c+"\n").encode())
+	
+open("view", "wb").writelines(cs)
+```
+
 Now we have the flag splited in two lines:
 
 ```
