@@ -49,7 +49,7 @@ So we can say that we have informations about some prefixes of plaintext, that w
 
 ![data base hilght](assets/dataBase_hilight.png)
 
-Before starting this challenge, my teammate told me that he found a vulnerability in this algorithm that mentioned that using the same key and nonce is unsafe, so i started from this hypothesis, i said to myself that there may be a way to recover the key and nonce but after seeing the opration apllied 20 round for this algorithm i gave up:
+Before starting this challenge, my teammate told me that he found a vulnerability in this algorithm that mentioned that using the same key and nonce is unsafe, so i started from this hypothesis, i said to myself that there may be a way to recover the key and nonce but after seeing the oprations apllied 20 round for this algorithm i gave up:
 
 
 ![chacha20](assets/chacha20.png)
@@ -204,5 +204,5 @@ btcf{w3_d0_4_l177l3_kn0wn_pl41n73x7}
 ```
 
 
-We do a little known plainText )
+We do a little known plainText  :)
 
