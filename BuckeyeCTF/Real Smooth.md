@@ -49,10 +49,10 @@ So we can say that we have informations about some prefixes of plaintext, that w
 
 ![Challenge description](assets/dataBase_hilight.png)
 
-Before starting this challenge, my teammate told me that he found a vulnerability in this algorithm that mentioned that using the same key and nonce is unsafe, so i started from this hypothese, so i started from this hypothesis, i said to myself that there may be a way to recover the key and nonce but after seeing the opration apllied 20 round for this algorithm i gave up:
+Before starting this challenge, my teammate told me that he found a vulnerability in this algorithm that mentioned that using the same key and nonce is unsafe, so i started from this hypothesis, i said to myself that there may be a way to recover the key and nonce but after seeing the opration apllied 20 round for this algorithm i gave up:
 
 
-![Challenge description](chacha20.png)
+![Challenge description](assets/chacha20.png)
 
 
 
