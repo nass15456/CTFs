@@ -36,7 +36,7 @@ if __name__ == "__main__":
 ![database extract](assets/Database_extract.png)
 
 
-We can understand from the script that we have a password list encrypted with chacha20 wich is similar to salsa20 (inspired by dances name's)
+We can understand from the script that we have a password list encrypted with chacha20 wich is similar to salsa20 (inspired by dance's names)
 
 
 from the 14th line we know that passwords lengths are less or equal 18, and to fulfill the short ones, we add padding with spaces :
