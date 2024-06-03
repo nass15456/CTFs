@@ -194,7 +194,7 @@ def verify(token):
 I started by checking if i can bypass the regex but it didnt work for me, so the solution seems to be about the hash, as i know brute force a hash or decode it is not possible and the only thing i knew from CTFs proof of works we can bruteforce a preimage starting with specific prefix to get hash wich ends with 4 hexadecimal digits similar to a target hash
 
 
-After reseachs i found this github repo [link for hhash extender](https://github.com/iagox86/hash_extender) and from it's descreption it's interesting this is exactly what we want:
+After reseachs i found this github repo [link for hash extender](https://github.com/iagox86/hash_extender) and from it's descreption it's interesting this is exactly what we want:
 
 ```
 An application is susceptible to a hash length extension attack if it prepends a secret value to a string, hashes it with a vulnerable algorithm, and entrusts the attacker with both the string and the hash, but not the secret. Then, the server relies on the secret to decide whether or not the data returned later is the same as the original data.
