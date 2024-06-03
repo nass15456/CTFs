@@ -228,7 +228,7 @@ The first line is the new signature, while the second is the new right part of p
 b'nassimmes;user\x80\x00\x00\x00\x00\x00\x00\x00\x01\xb0;admin'
 ```
 
-Awesome now all i have to do is to join this values with '|' and encode the result in base64:
+Awesome now all i have to do is to join these values with '|' and encode the result in base64:
 
 ```python 
 >>> b64encode(bytes.fromhex("6e617373696d6d65733b75736572800000000000000001b03b61646d696e")+b"|"+bytes.fromhex("6442a79d54cc290115b40b486ecd9fc94bdbe01d51e7fa21fea80e5bf5d7fb16"))
