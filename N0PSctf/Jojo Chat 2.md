@@ -150,7 +150,7 @@ So let's say my username is nassimmes, once the system creates my user he prints
 ![Create account](assets/create_account.png)
 
 
-"bmFzc2ltbWVzO3VzZXJ8VcxyG3KT/GK7NcUluWuNUIpKZBCmqtNbxHI9vxjJcKg="
+`bmFzc2ltbWVzO3VzZXJ8VcxyG3KT/GK7NcUluWuNUIpKZBCmqtNbxHI9vxjJcKg=`
 
 the token is generated using this function:
 ```python 
@@ -245,4 +245,4 @@ And we get the flag:
 N0PS{b3w4R3_0F_l3NgTh_XT3nS1on_4Tt4cK5}
 ```
 
-be ware of length extension attacks :)
+Be ware of length extension attacks :)
