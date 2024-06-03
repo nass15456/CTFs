@@ -163,7 +163,7 @@ def sign(username, is_admin=False):
         return b64encode(username.encode() + b";user|" + sig)
 ```
 
-While is_admin value is always set to false my token is a concatenation of `${username};user|${signature}` and the sinature is calculated as following:
+While is_admin value is always set to false my token is a concatenation of `${username};user|${signature}` and the signature is calculated as following:
 
 sha256(`${SECRET}${username};user`)
 
