@@ -178,6 +178,7 @@ b'nassimmes;user|U\xccr\x1br\x93\xfcb\xbb5\xc5%\xb9k\x8dP\x8aJd\x10\xa6\xaa\xd3[
 So our goal here is to create a fake token which contains ;admin at the end, and to do that we have 2 issues:
 
 1- we can not create user with ';' because of regex restrictions
+
 2- if we try to fake the token the system will verify the siganture using a secret as salt in the preimage of hash wich is uknown for us:
 
 ```python 
