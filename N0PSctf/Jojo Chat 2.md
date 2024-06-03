@@ -131,7 +131,7 @@ The code is offering us 3 options:
 3) Leave
 
 
-First we try to create an acount, the script will ask for a username with only alphanumeric chars and empty name is not allowed with a regex checking:
+First we try to create an account, the script will ask for a username with only alphanumeric characters and empty name is not allowed with a regex checking:
 
 ```python
     if not re.match("^[A-Za-z0-9]+$", name):
@@ -139,7 +139,7 @@ First we try to create an acount, the script will ask for a username with only a
         exit()
 ```
 
-in addition if the username already exisits we will be rejected but it doesnt matter because to be check whether we are admin or not the script will verify only our role and not the username:
+in addition if the username already exists we will be rejected but it doesn't matter because to check whether we are admin or not the script will verify only our role and not the username:
 
 ```python 
     role = b64decode(token).split(b"|")[0].split(b";")[-1].decode()
@@ -147,7 +147,7 @@ in addition if the username already exisits we will be rejected but it doesnt ma
 ```
 
 
-So let's say my username is nassimmes, once the system createsmy user he prints my token encoded in base64 to use to connect:
+So let's say my username is nassimmes, once the system creates my user he prints my token encoded in base64 to use to connect:
 
 ![Create account](assets/create_account.png)
 
@@ -175,9 +175,9 @@ the decoded value of my token:
 b'nassimmes;user|U\xccr\x1br\x93\xfcb\xbb5\xc5%\xb9k\x8dP\x8aJd\x10\xa6\xaa\xd3[\xc4r=\xbf\x18\xc9p\xa8'
 ```
 
-So our goal here is to create a fake token wich contains ;admin at the end, and to do that we have 2 issuses:
+So our goal here is to create a fake token which contains ;admin at the end, and to do that we have 2 issues:
 
-1- we can not create user with ; because of regex check
+1- we can not create user with ';' because of regex restrictions
 2- if we try to fake the token the system will verify the siganture using a secret as salt in the preimage of hash wich is uknown for us:
 
 ```python 
@@ -193,11 +193,11 @@ def verify(token):
 I started by checking if i can bypass the regex but it didnt work for me, so the solution seems to be about the hash, as i know brute force a hash or decode it is not possible and the only thing i knew from CTFs proof of works we can bruteforce a preimage starting with specific prefix to get hash wich ends with 4 hexadecimal digits similar to a taret hash
 
 
-After reseachs i found this github repo [link for hhash extender](https://github.com/iagox86/hash_extender) and from it's descreption it seems to be similar to our case:
+After reseachs i found this github repo [link for hhash extender](https://github.com/iagox86/hash_extender) and from it's descreption it's interesting this is exactly what we want:
 
-
+```
 An application is susceptible to a hash length extension attack if it prepends a secret value to a string, hashes it with a vulnerable algorithm, and entrusts the attacker with both the string and the hash, but not the secret. Then, the server relies on the secret to decide whether or not the data returned later is the same as the original data.
-
+```
 
 I clonned the repo and i laucnhed it as following : 
 
@@ -211,7 +211,7 @@ a is the data to append
 s is my sgnature (right value after '|') encoded in hex
 l is the secret length (guessed from the fake secret in the script)
 
-The answer i got is thhe following:
+The answer i've got:
 
 ```
 Type: sha256
@@ -220,14 +220,14 @@ New signature: 6442a79d54cc290115b40b486ecd9fc94bdbe01d51e7fa21fea80e5bf5d7fb16
 New string: 6e617373696d6d65733b75736572800000000000000001b03b61646d696e
 ```
  
-the first ligne is the new signature, while the second s the new right part of preimage:
+The first line is the new signature, while the second is the new right part of preimage:
 
 ```python 
 >>> bytes.fromhex("6e617373696d6d65733b75736572800000000000000001b03b61646d696e")
 b'nassimmes;user\x80\x00\x00\x00\x00\x00\x00\x00\x01\xb0;admin'
 ```
 
-Awesome now all i have to do is to join this values with '|' and encode the result to base64:
+Awesome now all i have to do is to join this values with '|' and encode the result in base64:
 
 ```python 
 >>> b64encode(bytes.fromhex("6e617373696d6d65733b75736572800000000000000001b03b61646d696e")+b"|"+bytes.fromhex("6442a79d54cc290115b40b486ecd9fc94bdbe01d51e7fa21fea80e5bf5d7fb16"))
