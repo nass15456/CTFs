@@ -188,7 +188,7 @@ def verify(token):
 ```
 
 
-I started by checking if i can bypass the regex but it didnt work for me, so the solution seems to be about the hash, as i know brute force a hash or decode it is not possible and the only thing i knew from CTFs proof of works we can bruteforce a preimage starting with specific prefix to get hash wich ends with 4 hexadecimal digits similar to a target hash, also finding a collision is not an easy task.
+I started by checking if i can bypass the regex but it didnt work for me, so the solution seems to be about the hash, as i know bruteforcing a hash or decode it is not possible and the only thing i knew from CTFs proof of works we can bruteforce a preimage starting with specific prefix to get hash wich ends with 4 hexadecimal digits similar to a target hash, also finding a collision is not an easy task.
 
 
 After reseachs i found this github repo [link for hash extender](https://github.com/iagox86/hash_extender) and from the descreption it's interesting, this is exactly what we want:
@@ -225,7 +225,7 @@ The first line is the new signature, while the second is the new right part of p
 b'nassimmes;user\x80\x00\x00\x00\x00\x00\x00\x00\x01\xb0;admin'
 ```
 
-Awesome now all i have to do is to join these values with '|' and encode the result in base64:
+Awesome now all i have to do is to join these values with `|` and encode the result in base64:
 
 ```python 
 >>> b64encode(bytes.fromhex("6e617373696d6d65733b75736572800000000000000001b03b61646d696e")+b"|"+bytes.fromhex("6442a79d54cc290115b40b486ecd9fc94bdbe01d51e7fa21fea80e5bf5d7fb16"))
