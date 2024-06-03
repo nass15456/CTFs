@@ -77,8 +77,8 @@ First thing we need to do is understaning the code specialy with theese weird fu
 
 Cool it seems to be RNG problem, so after fixing the seed of the pseudo random, the script will give us 2 suggestions:
 
--Encrypting a custom message 
--Encrypting the secret value
+- Encrypting a custom message 
+- Encrypting the secret value
 
 The encreption function is an xor with key generated randomly in loop
 ```python
