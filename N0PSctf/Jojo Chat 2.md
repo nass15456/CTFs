@@ -125,11 +125,9 @@ while True:
 According to the description to solve this challenge we need to get admin access 
 
 The code is offering us 3 options:
-
 1) Create an account
 2) Login 
 3) Leave
-
 
 First we try to create an account, the script will ask for a username with only alphanumeric characters and empty name is not allowed with a regex checking:
 
@@ -139,7 +137,7 @@ First we try to create an account, the script will ask for a username with only 
         exit()
 ```
 
-in addition if the username already exists we will be rejected but it doesn't matter because to check whether we are admin or not the script will verify only our role and not the username:
+In addition if the username already exists we will be rejected but it doesn't matter because to check whether we are admin or not the script will verify only our role and not the username:
 
 ```python 
     role = b64decode(token).split(b"|")[0].split(b";")[-1].decode()
@@ -165,9 +163,9 @@ def sign(username, is_admin=False):
         return b64encode(username.encode() + b";user|" + sig)
 ```
 
-While is_admin is always set to false my token is a concatenation of ${username};user|${signature} and the sinature is calculated as following:
+While is_admin value is always set to false my token is a concatenation of `${username};user|${signature}` and the sinature is calculated as following:
 
-sha256(${SECRET}${username};user)
+sha256(`${SECRET}${username};user`)
 
 the decoded value of my token:
 
@@ -175,10 +173,9 @@ the decoded value of my token:
 b'nassimmes;user|U\xccr\x1br\x93\xfcb\xbb5\xc5%\xb9k\x8dP\x8aJd\x10\xa6\xaa\xd3[\xc4r=\xbf\x18\xc9p\xa8'
 ```
 
-So our goal here is to create a fake token which contains ;admin at the end, and to do that we have 2 issues:
+So our goal here is to create a fake token which contains `;admin` at the end, and to do that we have 2 issues:
 
-1- we can not create user with ';' because of regex restrictions
-
+1- we can not create user with `;` because of regex restrictions
 2- if we try to fake the token the system will verify the siganture using a secret as salt in the preimage of hash wich is uknown for us:
 
 ```python 
@@ -191,10 +188,10 @@ def verify(token):
 ```
 
 
-I started by checking if i can bypass the regex but it didnt work for me, so the solution seems to be about the hash, as i know brute force a hash or decode it is not possible and the only thing i knew from CTFs proof of works we can bruteforce a preimage starting with specific prefix to get hash wich ends with 4 hexadecimal digits similar to a target hash
+I started by checking if i can bypass the regex but it didnt work for me, so the solution seems to be about the hash, as i know brute force a hash or decode it is not possible and the only thing i knew from CTFs proof of works we can bruteforce a preimage starting with specific prefix to get hash wich ends with 4 hexadecimal digits similar to a target hash, also finding a collision is not an easy task.
 
 
-After reseachs i found this github repo [link for hash extender](https://github.com/iagox86/hash_extender) and from it's descreption it's interesting this is exactly what we want:
+After reseachs i found this github repo [link for hash extender](https://github.com/iagox86/hash_extender) and from the descreption it's interesting, this is exactly what we want:
 
 ```
 An application is susceptible to a hash length extension attack if it prepends a secret value to a string, hashes it with a vulnerable algorithm, and entrusts the attacker with both the string and the hash, but not the secret. Then, the server relies on the secret to decide whether or not the data returned later is the same as the original data.
@@ -248,4 +245,4 @@ And we get the flag:
 N0PS{b3w4R3_0F_l3NgTh_XT3nS1on_4Tt4cK5}
 ```
 
-be ware of length extension attacks
+be ware of length extension attacks :)
