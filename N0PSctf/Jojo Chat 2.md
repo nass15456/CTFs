@@ -145,7 +145,7 @@ In addition if the username already exists we will be rejected but it doesn't ma
 ```
 
 
-So let's say my username is nassimmes, once the system creates my user he prints my token encoded in base64 to use to connect:
+So let's say my username is nassimmes, once the system creates my user he prints my token encoded in base64 in order to use it in login:
 
 ![Create account](assets/create_account.png)
 
