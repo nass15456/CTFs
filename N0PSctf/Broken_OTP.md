@@ -55,32 +55,32 @@ if __name__ == '__main__':
 
 First thing we need to do is understaning the code specialy with theese weird functions calls, for the better understanding i launched few of them in python (version 3.12) and i quickly understood that:
 
-g is generating timestamp:
+`g` is generating timestamp:
 
 ```python
 >>> g(BLACK,d(t[3]))(g(_i(d(t[0])), d(t[0]))())
 1717433968
 ```
 
-fb is a bytes to long function
+`fb` is a bytes to long function
 
 ```python
 >>> fb(secret.encode())
 504361349353409634517350059917776100900870838360
 ```
 
-s is the addition of secret and timestamp
+`s` is the addition of secret and timestamp
 
 
-r is a random intiialisation with s a seed
+`r` is a random initialisation with `s` as seed
 
 
-Cool it seems to be RNG problem, so after fixing the seed of the pesudo random, the script will give us 2 suggestions:
+Cool it seems to be RNG problem, so after fixing the seed of the pseudo random, the script will give us 2 suggestions:
 
--Encrypt a custom message 
--Encrypt the secret value
+-Encrypting a custom message 
+-Encrypting the secret value
 
-The encreption function is an xor with key generated randomly 
+The encreption function is an xor with key generated randomly in loop
 ```python
 def kg(l):
     return bytes([random.randint(0,255) for i in range(l)])
@@ -93,8 +93,10 @@ def c(p):
 So first thing i did is to send `'\x00' * len(SECRET)` to the server to retrieve the key values for my current time, and i tried to recover the seed value using different tools like `randcrack` or `v8_rand_buster` but it didnt work for me
 
 
-Then i've got an idea, i said by myself the secret value is always the same and the time in seconds so in theory 
-if we open 2 sockets to the server in the main time, the seed will be the same..
+Then i've got an idea, i said by myself the secret value is always the same and the time is in seconds so in theory 
+if we open 2 sockets to the server in nearly the main time, the seed will be the same..
+
+And all i have to do is xor the result of `xor(0-bytes)` wich gives us the key values with `xor(secret)`
 
 ## My script :
 
