@@ -1,4 +1,4 @@
-# N0PSctf 20244 Jojo Chat 2/2 writeup
+# N0PSctf 2024 Jojo Chat 2/2 writeup
 
 ## Challenge description
 
