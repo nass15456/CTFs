@@ -207,13 +207,10 @@ I clonned the repo and i laucnhed it as following :
 ```
 
 when :
-d is the right preimage value for my sinature
-
-a is the data to append
-
-s is my sgnature (right value after '|') encoded in hex
-
-l is the secret length (guessed from the fake secret in the script)
+- d is the right preimage value for my sinature
+- a is the data to append
+- s is my sgnature (right value after '|') encoded in hex
+- l is the secret length (guessed from the fake secret in the script)
 
 The answer i've got:
 
