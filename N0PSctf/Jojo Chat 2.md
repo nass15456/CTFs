@@ -129,7 +129,7 @@ The code is offering us 3 options:
 2) Login 
 3) Leave
 
-First we try to create an account, the script will ask for a username with only alphanumeric characters and empty name is not allowed with a regex checking:
+First we try to create an account, the script will ask for a username with a restriction on non alphanumeric characters and empty name using a regex checking:
 
 ```python
     if not re.match("^[A-Za-z0-9]+$", name):
