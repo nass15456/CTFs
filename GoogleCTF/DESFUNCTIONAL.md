@@ -157,7 +157,7 @@ send the cipher flipped we ll have something close to the challenge value, excep
 
 So the idea is to lunch the script and ask for decryption for the cipher xor  `b"\xff"*64` once `remaining` is empty. With randomness i noticed that is around the 8th to 12th round
 
-## script :
+## Script :
 ```python
 import socket
 
@@ -199,7 +199,7 @@ while not(find):
 		print(data)
 ```
 
-## flag :
+## Flag :
 ```
 CTF{y0u_m4y_NOT_g3t_th3_k3y_but_y0u_m4y_NOT_g3t_th3_c1ph3rt3xt_as_w3ll}
 ```
