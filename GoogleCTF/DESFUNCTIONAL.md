@@ -1,4 +1,4 @@
-# GoogleCTF 2024 writeup
+# GoogleCTF 2024 DESFUNCTIONAL writeup
 
 ## Challenge description
 
